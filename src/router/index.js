@@ -45,22 +45,22 @@ export default new Router({
       }
     },
 
-    {
-      path: '/archive',
-      name: 'Archive',
-      component: () => import('@/views/archive/index'),
-      meta: {
-        title: '归档'
-      }
-    },
-    {
-      path: '/friendslink',
-      name: 'Friendslink',
-      component: () => import('@/views/friendslink/index'),
-      meta: {
-        title: '友链'
-      }
-    },
+    // {
+    //   path: '/archive',
+    //   name: 'Archive',
+    //   component: () => import('@/views/archive/index'),
+    //   meta: {
+    //     title: '归档'
+    //   }
+    // },
+    // {
+    //   path: '/friendslink',
+    //   name: 'Friendslink',
+    //   component: () => import('@/views/friendslink/index'),
+    //   meta: {
+    //     title: '友链'
+    //   }
+    // },
     {
       path: '/reward',
       name: 'Reward',

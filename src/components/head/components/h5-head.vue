@@ -14,27 +14,27 @@
           <el-menu-item index="/">
             <i class="fa fa-wa fa-home" /> 首页
           </el-menu-item>
-          <el-submenu index="2">
-            <template slot="title">
-              <i class="fa fa-wa fa-flask" /> 实验室
-            </template>
-            <el-menu-item
-              v-for="(item, index) in projectList"
-              :key="'class2' + index"
-              index
-            >
-              <a :href="item.nav_url" target="_blank">{{ item.nav_name }}</a>
-            </el-menu-item>
-          </el-submenu>
-          <el-menu-item index="/archive">
-            <i class="fa fa-wa fa-archive" /> 归档
-          </el-menu-item>
-          <el-menu-item index="/reward">
-            <i class="fa fa-wa fa-cny" /> 赞赏
-          </el-menu-item>
-          <el-menu-item index="/friendslink">
-            <i class="fa fa-wa fa-users" /> 伙伴
-          </el-menu-item>
+<!--          <el-submenu index="2">-->
+<!--            <template slot="title">-->
+<!--              <i class="fa fa-wa fa-flask" /> 实验室-->
+<!--            </template>-->
+<!--            <el-menu-item-->
+<!--              v-for="(item, index) in projectList"-->
+<!--              :key="'class2' + index"-->
+<!--              index-->
+<!--            >-->
+<!--              <a :href="item.nav_url" target="_blank">{{ item.nav_name }}</a>-->
+<!--            </el-menu-item>-->
+<!--          </el-submenu>-->
+<!--          <el-menu-item index="/archive">-->
+<!--            <i class="fa fa-wa fa-archive" /> 归档-->
+<!--          </el-menu-item>-->
+<!--          <el-menu-item index="/reward">-->
+<!--            <i class="fa fa-wa fa-cny" /> 赞赏-->
+<!--          </el-menu-item>-->
+<!--          <el-menu-item index="/friendslink">-->
+<!--            <i class="fa fa-wa fa-users" /> 伙伴-->
+<!--          </el-menu-item>-->
           <el-menu-item index="/message">
             <i class="fa fa-wa fa-pencil" /> 留言板
           </el-menu-item>

@@ -3,6 +3,7 @@
   <el-row class="sharelistBox">
     <el-col v-for="(item, index) in list" :key="'article' + index" :span="24" class="s-item tcommonBox">
       <articleHead :item="item" />
+      <h1>sssssssssss</h1>
       <div class="article-content-list" @click="goDetail(item._id)">
         <Content :content="item.content" />
         <!-- <div class="article-description" >

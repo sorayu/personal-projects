@@ -12,63 +12,63 @@
       <el-menu-item index="/">
         <i class="fa fa-wa fa-home" /> 首页
       </el-menu-item>
-      <el-submenu index :popper-append-to-body="false">
-        <template slot="title">
-          <i class="fa fa-wa fa-flask" /> 实验室
-        </template>
-        <el-menu-item v-for="(item, index) in projectList" :key="'class2' + index" index>
-          <a :href="item.nav_url" target="_blank">{{ item.nav_name }}</a>
-        </el-menu-item>
-      </el-submenu>
-      <el-menu-item index="/archive">
-        <i class="fa fa-wa fa-archive" /> 归档
-      </el-menu-item>
-      <el-menu-item index="/reward">
-        <i class="fa fa-wa fa-cny" /> 赞赏
-      </el-menu-item>
-      <el-menu-item index="/friendslink">
-        <i class="fa fa-wa fa-users" /> 伙伴
-      </el-menu-item>
+<!--      <el-submenu index :popper-append-to-body="false">-->
+<!--        <template slot="title">-->
+<!--          <i class="fa fa-wa fa-flask" /> 实验室-->
+<!--        </template>-->
+<!--        <el-menu-item v-for="(item, index) in projectList" :key="'class2' + index" index>-->
+<!--          <a :href="item.nav_url" target="_blank">{{ item.nav_name }}</a>-->
+<!--        </el-menu-item>-->
+<!--      </el-submenu>-->
+<!--      <el-menu-item index="/archive">-->
+<!--        <i class="fa fa-wa fa-archive" /> 归档-->
+<!--      </el-menu-item>-->
+<!--      <el-menu-item index="/reward">-->
+<!--        <i class="fa fa-wa fa-cny" /> 赞赏-->
+<!--      </el-menu-item>-->
+<!--      <el-menu-item index="/friendslink">-->
+<!--        <i class="fa fa-wa fa-users" /> 伙伴-->
+<!--      </el-menu-item>-->
       <el-menu-item index="/message">
         <i class="fa fa-wa fa-pencil" /> 留言板
       </el-menu-item>
       <el-menu-item index="/aboutme">
         <i class="fa fa-wa fa-vcard" /> 关于
       </el-menu-item>
-      <div class="pcsearchbox">
-        <i class="el-icon-search pcsearchicon" />
-        <div class="pcsearchinput" :class="searchkey ? 'hasSearched' : ''">
-          <el-input v-model="searchkey" placeholder="搜索" @keyup.enter.native="searchEnterFun" @change="searchChangeFun">
-            <i slot="suffix" class="el-input__icon el-icon-search" @click="searchEnterFun" />
-          </el-input>
-        </div>
-      </div>
-      <div class="userInfo">
-        <div v-show="!haslogin" class="nologin">
-          <el-tooltip effect="dark" content="登录" placement="left-end">
-            <a href="javascript:void(0);" @click="logoinFun(1)">登录</a>
-          </el-tooltip>
-        </div>
-        <div v-show="haslogin" class="haslogin">
-          <i class="fa fa-fw fa-user-circle userImg" />
-          <ul class="haslogin-info">
-            <li>
-              <a @click="goHandle({ name: 'User' })">个人中心</a>
-            </li>
-            <li>
-              <a @click="goHandle({ name: 'LikeCollect', query: { like: 1 } })">喜欢列表</a>
-            </li>
-            <li>
-              <a @click="
-                  goHandle({ name: 'LikeCollect', query: { collect: 1 } })
-                ">收藏列表</a>
-            </li>
-            <li>
-              <a href="javascript:void(0);" @click="userlogout">退出登录</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+<!--      <div class="pcsearchbox">-->
+<!--        <i class="el-icon-search pcsearchicon" />-->
+<!--        <div class="pcsearchinput" :class="searchkey ? 'hasSearched' : ''">-->
+<!--          <el-input v-model="searchkey" placeholder="搜索" @keyup.enter.native="searchEnterFun" @change="searchChangeFun">-->
+<!--            <i slot="suffix" class="el-input__icon el-icon-search" @click="searchEnterFun" />-->
+<!--          </el-input>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="userInfo">-->
+<!--        <div v-show="!haslogin" class="nologin">-->
+<!--          <el-tooltip effect="dark" content="登录" placement="left-end">-->
+<!--            <a href="javascript:void(0);" @click="logoinFun(1)">登录</a>-->
+<!--          </el-tooltip>-->
+<!--        </div>-->
+<!--        <div v-show="haslogin" class="haslogin">-->
+<!--          <i class="fa fa-fw fa-user-circle userImg" />-->
+<!--          <ul class="haslogin-info">-->
+<!--            <li>-->
+<!--              <a @click="goHandle({ name: 'User' })">个人中心</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a @click="goHandle({ name: 'LikeCollect', query: { like: 1 } })">喜欢列表</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a @click="-->
+<!--                  goHandle({ name: 'LikeCollect', query: { collect: 1 } })-->
+<!--                ">收藏列表</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="javascript:void(0);" @click="userlogout">退出登录</a>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
     </el-menu>
   </div>
 </template>

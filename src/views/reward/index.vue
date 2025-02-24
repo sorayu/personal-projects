@@ -29,12 +29,12 @@
         </div>
       </el-col>
     </el-row>
-    <div class="reward-description-title">@赞赏记录：</div>
-    <el-table :data="tableData" border style="width: 100%">
-      <el-table-column prop="pay_time" label="日期" align="center" />
-      <el-table-column prop="name" label="赞赏人" align="center" />
-      <el-table-column prop="money" label="金额" align="center" />
-    </el-table>
+<!--    <div class="reward-description-title">@赞赏记录：</div>-->
+<!--    <el-table :data="tableData" border style="width: 100%">-->
+<!--      <el-table-column prop="pay_time" label="日期" align="center" />-->
+<!--      <el-table-column prop="name" label="赞赏人" align="center" />-->
+<!--      <el-table-column prop="money" label="金额" align="center" />-->
+<!--    </el-table>-->
   </div>
 </template>
 

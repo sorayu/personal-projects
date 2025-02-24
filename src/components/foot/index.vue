@@ -5,7 +5,7 @@
       <p>
         博客已正常运行
         <span>{{ longTime }}</span>
-        <span class="timeJump">(●'◡'●)ﾉ♥</span>
+        <span class="timeJump">♥</span>
       </p>
       <p>
         托管于
@@ -53,7 +53,7 @@ export default {
   methods: {
     runTime() {
       // 运行倒计时
-      var oldTime = new Date('2024/02/22 00:00:00')
+      var oldTime = new Date('2025/02/22 00:00:00')
       setInterval(() => {
         const nowTime = new Date()
         const longTime = nowTime - oldTime
