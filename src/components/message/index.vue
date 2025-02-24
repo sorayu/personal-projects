@@ -4,9 +4,10 @@
     <div ref="respondBox" class="tmsg-respond">
       <h3>
         发表评论
-        <small v-show="isRespond" class="tcolorm" @click="removeRespond"
-          >取消回复</small
-        >
+        <small v-show="isRespond"
+               class="tcolorm"
+               @click="removeRespond"
+        >取消回复</small>
       </h3>
       <form class="">
         <el-input
@@ -30,7 +31,7 @@
                 <img
                   :src="require('@/assets/img/emot/image/' + oitem.url)"
                   alt=""
-                />
+                >
               </li>
             </ul>
             <div class="OwO-bar">
@@ -131,12 +132,10 @@
             </ul>
           </li>
         </ul>
-        <!-- <h1 v-show="hasMore"
-            class="tcolors-bg"
-            @click="addMoreFun">查看更多</h1> -->
-        <AButton v-show="hasMore" size="large" @click="addMoreFun"
-          >查看更多</AButton
-        >
+        <AButton v-show="hasMore"
+                 size="large"
+                 @click="addMoreFun"
+        >查看更多</AButton>
         <!-- <h1 v-show="!hasMore"
             class="tcolors-bg">没有更多</h1> -->
         <AButton v-show="!hasMore" size="large">没有更多</AButton>
@@ -195,7 +194,7 @@ export default {
   },
   async mounted() {
     // 页面加载完成后
-    await this.routeChange()
+    // await this.routeChange()
   },
   methods: {
     // 事件处理器
@@ -217,29 +216,29 @@ export default {
     // 发送留言
     async sendMsg() {
       if (this.textarea && this.textarea.trim()) {
-        const res = await commentAPI.add({
-          content: xss(this.textarea.trim()),
-          articleId: this.id,
-          parentId: this.isRespond ? this.pid : null
-        })
-        if (res.code === 0) {
-          // this.routeChange()
-          this.textarea = ''
-          this.removeRespond()
-          const timer = setTimeout(() => {
-            this.sendTip = '发送~'
-            clearTimeout(timer)
-          }, 1000)
-          if (this.isRespond) {
-            if (this.pIndex == -1) {
-              this.list[this.leaveIndex].children.unshift(res)
-            } else {
-              this.list[this.leaveIndex].children.push(res)
-            }
-          } else {
-            this.list.unshift(res.data)
-          }
-        }
+        // const res = await commentAPI.add({
+        //   content: xss(this.textarea.trim()),
+        //   articleId: this.id,
+        //   parentId: this.isRespond ? this.pid : null
+        // })
+        // if (res.code === 0) {
+        //   // this.routeChange()
+        //   this.textarea = ''
+        //   this.removeRespond()
+        //   const timer = setTimeout(() => {
+        //     this.sendTip = '发送~'
+        //     clearTimeout(timer)
+        //   }, 1000)
+        //   if (this.isRespond) {
+        //     if (this.pIndex == -1) {
+        //       this.list[this.leaveIndex].children.unshift(res)
+        //     } else {
+        //       this.list[this.leaveIndex].children.push(res)
+        //     }
+        //   } else {
+        //     this.list.unshift(res.data)
+        //   }
+        // }
       } else {
         this.sendTip = '内容不能为空~'
         const timer = setTimeout(() => {
@@ -274,21 +273,26 @@ export default {
         articleId: this.id,
         state: 1
       }
-
+      // this.list = {
+      //   username: '张三',
+      //   label: '这是label',
+      //   createDate: '2025.02.24',
+      //   content: '这是留言内容'
+      // }
       const res = await commentAPI.getList(options)
-      // console.log('list---data', res.data)
-      const { list, pagination } = res.data
-      this.list = initData ? list : this.list.concat(list)
-      this.total = pagination.countTotal
-      this.totalPage = pagination.totalPage
-      this.current = pagination.currentPage
-      this.hasMore = pagination.totalPage > pagination.currentPage
-      this.listLoading = false
+      // // console.log('list---data', res.data)
+      // const { list, pagination } = res.data
+      // this.list = initData ? list : this.list.concat(list)
+      // this.total = pagination.countTotal
+      // this.totalPage = pagination.totalPage
+      // this.current = pagination.currentPage
+      // this.hasMore = pagination.totalPage > pagination.currentPage
+      // this.listLoading = false
     },
     addMoreFun() {
       // 查看更多
       ++this.current
-      this.getList(false)
+      // this.getList(false)
     },
     async routeChange() {
       // 重新加载

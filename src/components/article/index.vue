@@ -74,7 +74,7 @@ export default {
   },
   async created() {
     // 生命周期函数
-    await this.routeChange()
+    // await this.routeChange()
   },
 
   methods: {

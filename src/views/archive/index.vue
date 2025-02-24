@@ -63,7 +63,7 @@ export default {
   async created() {
     this.classId = this.$route.query.classId || null
     this.tagsId = this.$route.query.tagsId || null
-    await this.getAllList(this.classId, this.tagsId)
+    // await this.getAllList(this.classId, this.tagsId)
   },
   methods: {
     ...mapActions('common', ['goDetail']),

@@ -15,7 +15,7 @@ const mutations = {
 
 const actions = {
   async getActiveCate({ commit }, data) {
-    const res = await articleCateAPI.getAllList()
+    // const res = await articleCateAPI.getAllList()
     commit('CHANGE_SETTING', { key: 'activeCateList', value: res.data })
   },
   async goDetail({ commit }, id) {

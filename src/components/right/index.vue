@@ -113,7 +113,7 @@ export default {
   },
   async created() {
     this.init()
-    await this.getTopComment()
+    // await this.getTopComment()
   },
   beforeDestroy() {
     window.removeEventListener('scroll')
