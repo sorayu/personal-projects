@@ -1,40 +1,41 @@
 <!-- 文章列表 -->
 <template>
   <el-row class="sharelistBox">
-    <el-col v-for="(item, index) in list" :key="'article' + index" :span="24" class="s-item tcommonBox">
-      <articleHead :item="item" />
-      <h1>sssssssssss</h1>
-      <div class="article-content-list" @click="goDetail(item._id)">
-        <Content :content="item.content" />
-        <!-- <div class="article-description" >
-          {{ item.description }}
-        </div>-->
-        <!-- <div class="article-img">
-          <img :src="item.image"
-               alt=""
-               class="maxW">
-        </div>-->
-      </div>
-      <div class="viewdetail">
-        <!-- <a class="tcolors-bg"
-           @click="goDetail(item._id)">
-          阅读全文
-          <i class="el-icon-d-arrow-right" />
-        </a>-->
-        <AButton icon="el-icon-d-arrow-right" @click="goDetail(item._id)">阅读全文</AButton>
-      </div>
-    </el-col>
-    <el-col v-if="!listLoading" class="tcommonBox">
-      <el-pagination
-        class="pagination-list"
-        background
-        :page-size="pageSize"
-        :current-page.sync="current"
-        layout="prev, pager, next"
-        :total="total"
-        @current-change="handleCurrentChange"
-      />
-    </el-col>
+    <img src="@/assets/img/construction.jpg">
+    <h1 class="centered-title">网站建设中......</h1>
+<!--    <el-col v-for="(item, index) in list" :key="'article' + index" :span="24" class="s-item tcommonBox">-->
+<!--      <articleHead :item="item" />-->
+<!--      <div class="article-content-list" @click="goDetail(item._id)">-->
+<!--        <Content :content="item.content" />-->
+<!--        &lt;!&ndash; <div class="article-description" >-->
+<!--          {{ item.description }}-->
+<!--        </div>&ndash;&gt;-->
+<!--        &lt;!&ndash; <div class="article-img">-->
+<!--          <img :src="item.image"-->
+<!--               alt=""-->
+<!--               class="maxW">-->
+<!--        </div>&ndash;&gt;-->
+<!--      </div>-->
+<!--      <div class="viewdetail">-->
+<!--        &lt;!&ndash; <a class="tcolors-bg"-->
+<!--           @click="goDetail(item._id)">-->
+<!--          阅读全文-->
+<!--          <i class="el-icon-d-arrow-right" />-->
+<!--        </a>&ndash;&gt;-->
+<!--        <AButton icon="el-icon-d-arrow-right" @click="goDetail(item._id)">阅读全文</AButton>-->
+<!--      </div>-->
+<!--    </el-col>-->
+<!--    <el-col v-if="!listLoading" class="tcommonBox">-->
+<!--      <el-pagination-->
+<!--        class="pagination-list"-->
+<!--        background-->
+<!--        :page-size="pageSize"-->
+<!--        :current-page.sync="current"-->
+<!--        layout="prev, pager, next"-->
+<!--        :total="total"-->
+<!--        @current-change="handleCurrentChange"-->
+<!--      />-->
+<!--    </el-col>-->
   </el-row>
 </template>
 
@@ -123,6 +124,18 @@ export default {
   transition: all 0.5s ease-out;
   font-size: 15px;
   min-height: 500px;
+  position: relative;
+  width: 100%; /* 根据需要调整 */
+  height: 400px; /* 根据需要调整 */
+}
+
+.centered-title {
+  position: absolute;
+  top: 43%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  color: white; /* 根据需要调整 */
+  font-size: 2em; /* 根据需要调整 */
 }
 .pagination-list {
   text-align: center;
